@@ -13,12 +13,7 @@ const BentoGrid = ({
   className?: string;
 }) => {
   return (
-    <div
-      className={cn(
-        "grid w-full auto-rows-[22rem] gap-4",
-        className,
-      )}
-    >
+    <div className={cn("grid w-full auto-rows-[22rem] gap-4", className)}>
       {children}
     </div>
   );
@@ -33,7 +28,7 @@ const BentoCard = ({
   href,
   cta,
   position,
-  tags
+  tags,
 }: {
   name: string;
   className: string;
@@ -42,8 +37,8 @@ const BentoCard = ({
   description: string;
   href: string;
   cta: string;
-  position: string
-  tags: string[]
+  position: string;
+  tags: string[];
 }) => (
   <div
     key={name}
@@ -53,12 +48,10 @@ const BentoCard = ({
       "bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
       // dark styles
       "transform-gpu dark:bg-black dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
-      className,
+      className
     )}
   >
-    <Badge className="place-self-end">
-      {position}
-    </Badge>
+    <Badge className="place-self-end">{position}</Badge>
     <div>{background}</div>
     <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10">
       {/* <Icon className="h-12 w-12 origin-left transform-gpu text-neutral-700 transition-all duration-300 ease-in-out group-hover:scale-75" /> */}
@@ -73,7 +66,7 @@ const BentoCard = ({
       <p className="max-w-lg text-neutral-400">{description}</p>
       <div className="flex flex-wrap gap-1">
         {tags?.map((tag, index) => (
-          <Badge key={index} className="place-self-end" variant="outline">
+          <Badge key={index} className="place-self-end" variant="default">
             {tag}
           </Badge>
         ))}
@@ -82,7 +75,7 @@ const BentoCard = ({
 
     <div
       className={cn(
-        "pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100",
+        "pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
       )}
     >
       <Button variant="ghost" asChild size="sm" className="pointer-events-auto">

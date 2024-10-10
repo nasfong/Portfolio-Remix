@@ -1,5 +1,11 @@
 import React from "react";
-import { CalendarIcon, HomeIcon, Layers, Lightbulb, MailIcon } from "lucide-react";
+import {
+  CalendarIcon,
+  HomeIcon,
+  Layers,
+  Lightbulb,
+  MailIcon,
+} from "lucide-react";
 import { TelegramIcon } from "hugeicons-react";
 
 import { cn } from "~/lib/utils";
@@ -29,9 +35,7 @@ const Icons = {
       />
     </svg>
   ),
-  telegram: (props: IconProps) => (
-    <TelegramIcon {...props} />
-  ),
+  telegram: (props: IconProps) => <TelegramIcon {...props} />,
   youtube: (props: IconProps) => (
     <svg
       width="32px"
@@ -77,7 +81,7 @@ const DATA = {
         name: "Telegram",
         url: "https://t.me/nasfong",
         icon: Icons.telegram,
-      }
+      },
     },
   },
 };
@@ -87,55 +91,51 @@ export default function DockDemo() {
     <div className="fixed bottom-10 left-1/2 transform -translate-x-1/2">
       <TooltipProvider>
         <Dock direction="middle">
-          {
-            DATA.navbar.map((item) => (
-              <DockIcon key={item.label}>
-                <Tooltip delayDuration={0.5}>
-                  <TooltipTrigger asChild>
-                    <Link
-                      to={item.href}
-                      aria-label={item.label}
-                      className={cn(
-                        buttonVariants({ variant: "ghost", size: "icon" }),
-                        "size-12 rounded-full",
-                      )}
-                    >
-                      <item.icon className="size-4" />
-                    </Link>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>{item.label}</p>
-                  </TooltipContent>
-                </Tooltip>
-              </DockIcon>
-            ))
-          }
+          {DATA.navbar.map((item) => (
+            <DockIcon key={item.label}>
+              <Tooltip delayDuration={0.5}>
+                <TooltipTrigger asChild>
+                  <Link
+                    to={item.href}
+                    aria-label={item.label}
+                    className={cn(
+                      buttonVariants({ variant: "ghost", size: "icon" }),
+                      "size-12 rounded-full"
+                    )}
+                  >
+                    <item.icon className="size-4" />
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{item.label}</p>
+                </TooltipContent>
+              </Tooltip>
+            </DockIcon>
+          ))}
           <Separator orientation="vertical" className="h-full" />
-          {
-            Object.entries(DATA.contact.social).map(([name, social]) => (
-              <DockIcon key={name}>
-                <Tooltip delayDuration={0.5}>
-                  <TooltipTrigger asChild>
-                    <Link
-                      to={social.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={social.name}
-                      className={cn(
-                        buttonVariants({ variant: "ghost", size: "icon" }),
-                        "size-12 rounded-full",
-                      )}
-                    >
-                      <social.icon className="size-4" />
-                    </Link>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>{name}</p>
-                  </TooltipContent>
-                </Tooltip>
-              </DockIcon>
-            ))
-          }
+          {Object.entries(DATA.contact.social).map(([name, social]) => (
+            <DockIcon key={name}>
+              <Tooltip delayDuration={0.5}>
+                <TooltipTrigger asChild>
+                  <Link
+                    to={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.name}
+                    className={cn(
+                      buttonVariants({ variant: "ghost", size: "icon" }),
+                      "size-12 rounded-full"
+                    )}
+                  >
+                    <social.icon className="size-4" />
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{name}</p>
+                </TooltipContent>
+              </Tooltip>
+            </DockIcon>
+          ))}
           <Separator orientation="vertical" className="h-full py-2" />
           <DockIcon>
             <Tooltip>
@@ -147,8 +147,8 @@ export default function DockDemo() {
               </TooltipContent>
             </Tooltip>
           </DockIcon>
-        </Dock >
-      </TooltipProvider >
-    </div >
+        </Dock>
+      </TooltipProvider>
+    </div>
   );
 }
