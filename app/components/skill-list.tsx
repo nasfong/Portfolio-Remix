@@ -7,7 +7,7 @@ interface MyComponentProps {
 
 export const SkillList: React.FC<MyComponentProps> = ({ items }) => {
   return (
-    <>
+    <div className="flex flex-wrap">
       {items && items.map((val, indx) => {
         return (
           <div className="p-4" key={indx}>
@@ -15,7 +15,7 @@ export const SkillList: React.FC<MyComponentProps> = ({ items }) => {
           </div>
         );
       })}
-    </>
+    </div>
   );
 };
 
