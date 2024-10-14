@@ -49,6 +49,7 @@ import motor_pic1 from "~/assets/image/motor/1.jpg"
 import motor_pic2 from "~/assets/image/motor/2.jpg"
 import motor_pic3 from "~/assets/image/motor/3.jpg"
 import WordPullUp from "~/components/magicui/word-pull-up";
+import { MetaFunction } from "@remix-run/react";
 
 const Work_Project = [
   {
@@ -57,8 +58,8 @@ const Work_Project = [
     description: "Company User Management System",
     position: "Frontend",
     tags: ["ReactJs", "Typescript", "Redux", "Bootstrap", "RestApi"],
-    href: "#",
-    cta: "Visit Project",
+    href: "",
+    cta: "Private Project",
     className: "col-span-3 lg:col-span-1",
     background: (
       <Marquee
@@ -75,7 +76,7 @@ const Work_Project = [
           <figure
             key={idx}
             className={cn(
-              "relative w-64 h-64 cursor-pointer overflow-hidden rounded-xl border",
+              "relative w-64 h-64 overflow-hidden rounded-xl border",
               "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
               "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
               "transform-gpu blur-[0px] transition-all duration-300 ease-out hover:blur-none",
@@ -93,8 +94,8 @@ const Work_Project = [
     description: "Mobile App for Loan Industry",
     position: "Frontend",
     tags: ["Vue", "Ionic", "Typescript", "i18n", "Graphql",],
-    href: "#",
-    cta: "Visit Project",
+    href: "",
+    cta: "Private Project",
     className: "col-span-3 lg:col-span-1",
     background: (
       <Marquee
@@ -111,7 +112,7 @@ const Work_Project = [
           <figure
             key={idx}
             className={cn(
-              "relative w-32 h-64 cursor-pointer overflow-hidden rounded-xl border",
+              "relative w-32 h-64 overflow-hidden rounded-xl border",
               "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
               "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
               "transform-gpu blur-[0px] transition-all duration-300 ease-out hover:blur-none",
@@ -129,8 +130,8 @@ const Work_Project = [
     position: "Frontend",
     tags: ["ReactJs", "Typescript", "Redux", "i18n", "Graphql", "Material-UI"],
     description: "Web Application for Loan Industry",
-    href: "#",
-    cta: "Visit Project",
+    href: "",
+    cta: "Private Project",
     className: "col-span-3 lg:col-span-1",
     background: (
       <Marquee
@@ -144,7 +145,7 @@ const Work_Project = [
           <figure
             key={idx}
             className={cn(
-              "relative w-64 h-64 cursor-pointer overflow-hidden rounded-xl border",
+              "relative w-64 h-64 overflow-hidden rounded-xl border",
               "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
               "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
               "transform-gpu blur-[0px] transition-all duration-300 ease-out hover:blur-none",
@@ -181,7 +182,7 @@ const Work_Project = [
           <figure
             key={idx}
             className={cn(
-              "relative w-64 h-64 cursor-pointer overflow-hidden rounded-xl border",
+              "relative w-64 h-64 overflow-hidden rounded-xl border",
               "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
               "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
               "transform-gpu blur-[0px] transition-all duration-300 ease-out hover:blur-none",
@@ -195,7 +196,7 @@ const Work_Project = [
   },
   {
     Icon: cloud,
-    name: "Entertainment and Cloud",
+    name: "Sabay Cloud",
     description: "Sabay Cloud Landing Page.",
     position: "Frontend",
     tags: ["ReactJs", "Material-UI"],
@@ -214,7 +215,7 @@ const Work_Project = [
           <figure
             key={idx}
             className={cn(
-              "relative w-64 h-64 cursor-pointer overflow-hidden rounded-xl border",
+              "relative w-64 h-64 overflow-hidden rounded-xl border",
               "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
               "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
               "transform-gpu blur-[0px] transition-all duration-300 ease-out hover:blur-none",
@@ -231,11 +232,11 @@ const Work_Project = [
 const Free_lancer = [
   {
     Icon: maom,
-    name: "Entertainment and Cloud",
+    name: "Maom Khmer Cuisine",
     description: "This food restaurant management system.",
     position: "FullStack",
     tags: ["ReactJs", "Typescript", "Tailwind", "Express", "RestApi"],
-    href: "https://cloud.sabay.com/",
+    href: "maomkhmercuisine.com",
     cta: "Visit Project",
     className: "col-span-3 lg:col-span-1",
     background: (
@@ -252,7 +253,7 @@ const Free_lancer = [
           <figure
             key={idx}
             className={cn(
-              "relative w-64 h-64 cursor-pointer overflow-hidden rounded-xl border",
+              "relative w-64 h-64 overflow-hidden rounded-xl border",
               "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
               "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
               "transform-gpu blur-[0px] transition-all duration-300 ease-out hover:blur-none",
@@ -266,11 +267,11 @@ const Free_lancer = [
   },
   {
     Icon: motor,
-    name: "Entertainment and Cloud",
-    description: "This motor store management system.",
+    name: "Motor Store",
+    description: "This motor store management system is designed for businesses.",
     position: "FullStack",
     tags: ["NextJs", "Typescript", "i18n", "RestApi", "Shadcn-UI"],
-    href: "https://www.maomkhmercuisine.com/",
+    href: "https://www.kyhanmotorshop.store",
     cta: "Visit Project",
     className: "col-span-3 lg:col-span-1",
     background: (
@@ -286,7 +287,7 @@ const Free_lancer = [
           <figure
             key={idx}
             className={cn(
-              "relative w-64 h-64 cursor-pointer overflow-hidden rounded-xl border",
+              "relative w-64 h-64 overflow-hidden rounded-xl border",
               "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
               "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
               "transform-gpu blur-[0px] transition-all duration-300 ease-out hover:blur-none",
@@ -300,6 +301,12 @@ const Free_lancer = [
   },
 ];
 
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Project - Samnang Tangfong" },
+    { name: "description", content: "Welcome to Samnang Tangfong profile!" },
+  ];
+};
 
 export default function Index() {
   return (

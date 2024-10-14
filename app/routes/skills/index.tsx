@@ -19,8 +19,8 @@ import Heading from "~/components/heading";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "Skill - Samnang Tangfong" },
+    { name: "description", content: "Welcome to Samnang Tangfong profile!" },
   ];
 };
 

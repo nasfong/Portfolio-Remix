@@ -1,9 +1,10 @@
 import { ReactNode } from "react";
-import { ArrowRightIcon } from "@radix-ui/react-icons";
+import { ArrowRightIcon, CrossCircledIcon } from "@radix-ui/react-icons";
 
 import { cn } from "~/lib/utils";
 import { Button } from "~/components/ui/button";
 import { Badge } from "../ui/badge";
+import { Link } from "@remix-run/react";
 
 const BentoGrid = ({
   children,
@@ -78,12 +79,21 @@ const BentoCard = ({
         "pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
       )}
     >
-      <Button variant="ghost" asChild size="sm" className="pointer-events-auto">
-        <a href={href}>
-          {cta}
-          <ArrowRightIcon className="ml-2 h-4 w-4" />
-        </a>
-      </Button>
+      {href ? (
+        <Button variant="outline" asChild size="sm" className="pointer-events-auto">
+          <Link to={href}>
+            {cta}
+            <ArrowRightIcon className="ml-2 h-4 w-4" />
+          </Link>
+        </Button>
+      ) : (
+        <Button variant="outline" asChild size="sm" disabled>
+          <span>
+            {cta}
+            <CrossCircledIcon className="ml-2 h-4 w-4" />
+          </span>
+        </Button>
+      )}
     </div>
     <div className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-black/[.03] group-hover:dark:bg-neutral-800/10" />
   </div>

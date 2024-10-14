@@ -2,12 +2,11 @@ import type { MetaFunction } from "@remix-run/node";
 import { useTheme } from "next-themes";
 import { MagicCard } from "~/components/magicui/magic-card";
 import profile from "~/assets/image/nasfong.jpg"
-import TextRotator from "~/components/text-rotator";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "Samnang Tangfong Portfolio" },
+    { name: "description", content: "Welcome to Samnang Tangfong profile!" },
   ];
 };
 
@@ -39,7 +38,7 @@ export default function Index() {
                 Samnang <br /> Tangfong.
               </h1>
               <h2 className="font-poppins text-3xl text-gray-500 max-sm:text-2xl">
-                Frontend Developer
+                Web Base Developer
               </h2>
             </div>
             <img
