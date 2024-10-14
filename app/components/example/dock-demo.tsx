@@ -17,7 +17,7 @@ import {
   TooltipTrigger,
 } from "~/components/ui/tooltip";
 import { Dock, DockIcon } from "~/components/magicui/dock";
-import { Link, NavLink, useLocation } from "@remix-run/react";
+import { Link, useLocation } from "@remix-run/react";
 import { ModeToggle } from "../mode-toggle";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
