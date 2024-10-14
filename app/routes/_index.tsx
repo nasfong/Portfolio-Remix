@@ -71,11 +71,11 @@ export default function Index() {
             </TooltipProvider>
           </div>
         </div>
-        <div className="absolute sm:static  right-10">
+        <div className="absolute sm:static top-2 right-10">
           <FramerWrapper y={0} x={-200}>
             <img
               src={profile}
-              className="border-white border object-cover h-10 w-auto  sm:h-full sm:w-full"
+              className="border-white border object-cover h-14 w-auto sm:h-full sm:w-full rounded-full sm:rounded-sm"
               alt="Samnang Tangfong profile"
             />
           </FramerWrapper>
