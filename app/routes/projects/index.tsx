@@ -162,7 +162,7 @@ const Work_Project = [
     name: "Entertainment and Cloud",
     description: "Entertainment and Cloud services.",
     position: "Frontend",
-    tags: ["ReactJs", "Redux", "Graphql", "i18n", "Material-UI"],
+    tags: ["ReactJs", "Redux", "Cypress", "Graphql", "i18n", "Material-UI"],
     href: "https://mysabay.com",
     cta: "Visit Project",
     className: "col-span-3 lg:col-span-1",
