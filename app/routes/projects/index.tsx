@@ -306,7 +306,7 @@ const Free_lancer = [
     name: "Motor Store",
     description: "This motor store management system is designed for businesses.",
     position: "FullStack",
-    tags: ["NextJs", "Typescript", "i18n", "RestApi", "Shadcn-UI"],
+    tags: ["NextJs", "Typescript", "i18n", "RestApi", "Shadcn-UI", "Redis"],
     href: "https://www.kyhanmotorshop.store",
     cta: "Visit Project",
     className: "col-span-3 lg:col-span-1",
