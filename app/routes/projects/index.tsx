@@ -49,6 +49,10 @@ import motor_pic1 from "~/assets/image/motor/1.jpg"
 import motor_pic2 from "~/assets/image/motor/2.jpg"
 import motor_pic3 from "~/assets/image/motor/3.jpg"
 import WordPullUp from "~/components/magicui/word-pull-up";
+
+import system from "~/assets/image/system.png";
+
+
 import { MetaFunction } from "@remix-run/react";
 
 const Work_Project = [
@@ -211,6 +215,38 @@ const Work_Project = [
         {[
           cloud_pic1,
           cloud_pic2,
+        ].map((s, idx) => (
+          <figure
+            key={idx}
+            className={cn(
+              "relative w-64 h-64 overflow-hidden rounded-xl border",
+              "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
+              "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
+              "transform-gpu blur-[0px] transition-all duration-300 ease-out hover:blur-none",
+            )}
+          >
+            <img src={s} alt={s} />
+          </figure>
+        ))}
+      </Marquee>
+    ),
+  },
+  {
+    Icon: system,
+    name: "Coming Soon",
+    description: "",
+    position: "",
+    tags: [],
+    href: "",
+    cta: "----",
+    className: "col-span-3 lg:col-span-1",
+    background: (
+      <Marquee
+        pauseOnHover
+        className="absolute top-10 [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] "
+      >
+        {[
+          system,
         ].map((s, idx) => (
           <figure
             key={idx}
