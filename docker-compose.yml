@@ -1,0 +1,11 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: remix-portfolio
+    ports:
+      - "3000:3000"  # use correct port for SSR server
+    environment:
+      - NODE_ENV=production
